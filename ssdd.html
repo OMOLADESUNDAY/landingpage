@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""  id="form-submit">
+        <p>Name</p>
+      <div class="row">
+           <div class="col-sm-6 fname " data-aos="fade-down">
+             
+             
+               <label for="inputPassword" class="col-sm-2 col-form-label">Firstname</label>
+                 <p class="fname-error"></p>
+                 <input type="text" name="fname" class="form-control" id="fname">
+               
+             
+             
+           </div>
+           <div class="col-sm-6" data-aos="fade-down">
+             
+             
+               <label for="inputPassword" class="col-sm-2 col-form-label">Lastname</label>
+               <p class="lname-error"></p>
+                 <input type="text" name="lname" class="form-control" id="lname">
+               
+             
+             
+           </div>
+      </div>
+      <div class="row email" data-aos="fade-down">
+        <div class="col-sm-12">
+         <label for="exampleFormControlInput1" class="form-label">Email address</label>
+         <p class="email-error"></p>
+         <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+      </div>
+       <div class="row" data-aos="fade-up">
+         <div class="col-sm-12">
+           <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+           <p class="message-error"></p>
+           <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+         </div>
+       </div>
+       <div class="submit">
+         <button id='btn-submit' value="submit" class="btn btn-primary" type="submit">submit</button>
+           <!-- <input type="submit" id='btn-submit' value="submit" class="btn btn-primary"> -->
+       </div>
+      </form>
+
+      <script>
+          var fname = document.getElementById("fname");
+    // var lname = document.getElementById("lname").value;
+    // var email = document.getElementById("email").value;
+    // var message = document.getElementById("message").value;
+    // var fname_error = document.getElementById("fname-error");
+    // var lname_error = document.getElementById("lname-error").innerText;
+    // var email_error = document.getElementById("email-error").innerText;
+    // var message_error = document.getElementById("message-error").innerText;
+        var form =document.getElementById("form-submit");
+        form.addEventListener('submit', function(e){
+           
+        if (fname.value ==="" || fname.value === null ) {
+            e.preventDefault(); 
+            fname_error.innerText = "firstname is empty"
+                    
+        }
+})    
+
+      </script>
+</body>
+</html>
